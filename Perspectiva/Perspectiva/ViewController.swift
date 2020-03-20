@@ -170,7 +170,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize =  (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if (self.view.frame.origin.y == 0 && isProductPriceTextField == true){
-                self.view.frame.origin.y -= keyboardSize.height
+                self.view.frame.origin.y -= 0.6 * (keyboardSize.height)
                 isProductPriceTextField = false
             }
         }
